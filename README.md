@@ -12,10 +12,11 @@ Currently, voters have to be present at the voting booth physically to be able t
 # The Block and Chain
 The block chain will be viewed in two levels  i.e two types of nodes: constituency and national  
   
-We use a system of public-private key pairs to encrypt-decrypt the data for the votes. The key pairs are generated at the constituency level. Each constituency will have a different public key which is used to encrypt the votes given by voters registered to that constituency. Since the constituencies have different keys, different blocks will have their data encrypted differently depending on their constituency.  
+We use a system of public-private key pairs to encrypt-decrypt the data for the votes. The key pairs are generated at the constituency level. Each constituency will have a different public key which is used to encrypt the votes given by voters registered to that constituency.  
+Since the constituencies have different keys, different blocks will have their data encrypted differently depending on their constituency.  
 Consequently, it would be almost impossible for anyone trying to illegally gain access to all the votes to do so without conquering the entire network, due to this encryption mechanism.  
 ## The Voting Process
-During the voting period, the voter will be asked to login to his/her account using the issued Voter ID and an MFA system. After a successful login, the voter will be directed to the ballot page where he/she will be asked to enter the candidate choice.  
+During the voting period, the voter will be asked to login to his/her account using the issued Voter ID and an MFA system. After a successful login, the voter will be directed to the ballot page where he/she will be asked to enter the candidate choice. Note here, that a voter will be shown candidates standing for elections only in the constituency he/she is registered to vote in, thus making sure that the vote is cast in the same constituency.  
 After this, the vote will be encrypted using the public key.  
 
 After the voting deadline the constituency nodes publish their private keys so data can be decrypted by the blockchain network. The votes can be counted once the data has propagated the network.
